@@ -1,0 +1,36 @@
+{
+  "name": "conversion",
+  "version": "1.0.0",
+  "description": "a javascript library for unit conversions and organizations",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poonzah/conversion.git"
+  },
+  "keywords": [
+    "conversion",
+    "number",
+    "numeric",
+    "metric",
+    "converter"
+  ],
+  "author": "Dariush Alipour",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poonzah/conversion/issues"
+  },
+  "homepage": "https://github.com/poonzah/conversion#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "eslint": "^5.10.0",
+    "eslint-config-google": "^0.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}
