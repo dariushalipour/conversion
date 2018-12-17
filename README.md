@@ -20,3 +20,32 @@ const myStrictOrganizer = organize([60, 60, 24, 7], {strict: true});
 const output = myStrictOrganizer(24 * 60 * 60);
 // output is [0, 1, 0, 0, 0], which means, 0 weeks, 1 day, 0 hours, 0 minutes and 0 seconds
 ```
+
+### .length(fromUnit, toUnit)(value)
+
+available units: 
+- 'm' / 'meter'
+- 'in' / 'inch'
+- 'ft' / 'feet'
+
+### .si(fromUnit, toUnit)(value)
+
+available units are listed in https://physics.nist.gov/cuu/Units/prefixes.html
+
+### .combine(units)(value) WORK_IN_PROGRESS
+combine() is the opposite of organize()
+
+## Usage Examples
+
+### Metric Height to Imperial Height
+
+```js
+import { length, organize }  from 'conversion'
+
+const ftIn = length('ft', 'in')(1) // equals 12
+const meterToInch = length('meter', 'inch') // returns a function
+
+const metricHeightToImperial = height => organize([ftIn])(meterToInch(height))
+
+metricHeightToImperial(1.85) // equals [6, 0.8346456692913584]
+```
