@@ -32,8 +32,21 @@ available units:
 
 available units are listed in https://physics.nist.gov/cuu/Units/prefixes.html
 
-### .combine(units)(value) WORK_IN_PROGRESS
+### .combine(units)(value)
 combine() is the opposite of organize()
+```js
+import { combine } from 'conversion';
+
+let output;
+
+// you can do
+output = combine([60,60])('00:01:30'.split(':').map(Number))
+// which returns 90
+
+// or you can simply do
+output = combine([60,60])([1, 0, 0])
+// which returns 3600
+```
 
 ## Usage Examples
 
